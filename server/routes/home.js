@@ -7,7 +7,7 @@ express = require('express');
 homeRouter = require('express-promise-router')();
 
 i18nOptions = {
-  path: '../../locales/__lng__/__ns__.json',
+  path: path.join(__dirname, '../../locales/__lng__/__ns__.json'),
   fallbackLng: 'en',
   fallbackNamespace: 'home'
 };
@@ -17,9 +17,7 @@ i18n = require('i18n-future').middleware(i18nOptions);
 homeRouter.use(i18n);
 
 homeRouter.use(function(req, res, next) {
-  res.locals.translate = function() {
-    return req.translate;
-  };
+  res.locals.translate = req.translate;
   return next();
 });
 

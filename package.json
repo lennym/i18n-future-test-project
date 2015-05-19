@@ -1,0 +1,12 @@
+{
+  "name": "i18n-future-test-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/index.js",
+  "dependencies": {
+    "ejs": "^2.3.1",
+    "express": "^4.12.4",
+    "express-promise-router": "^0.0.9",
+    "i18n-future": "^0.1.3"
+  }
+}
